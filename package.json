@@ -1,0 +1,17 @@
+{
+  "name": "app",
+  "version": "0.0.1",
+  "description": "app for tfg ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Barbara Pimenta",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.7.1",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "mongojs": "^1.3.0"
+  }
+}
