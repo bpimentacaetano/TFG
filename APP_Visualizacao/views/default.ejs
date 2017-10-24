@@ -1,0 +1,158 @@
+<html ng-app="TestApp">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/css/geral.css">
+
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+        <script src="/js/angular.min.js" type="application/javascript"></script>
+        <script src="/js/chartServices.js" type="application/javascript"></script>
+        <script src="/js/app.js" type="application/javascript"></script>
+
+        <script src="//code.highcharts.com/highcharts.js"></script>
+        <script src="//code.highcharts.com/maps/modules/map.js"></script>
+        <script src="//code.highcharts.com/mapdata/countries/br/br-all.js"></script>
+
+        <script src="/js/libs/TweenMax.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.6.1/less.min.js"></script>
+
+
+        <title> My angular exemple! </title>
+    </head>
+
+    <header><span class="title">Painel ComprasGov</span>
+        <ul class="navigation">
+            <!--  <li>
+                  <a href="#">Sobre</a>
+              </li>-->
+            <li>
+                <a class="triggerSobre" href="#">Sobre</a>  
+            </li>
+        </ul>
+    </header>
+    <body ng-controller="barController">
+        <div class="painel" id="Painel">
+            <div class="painelShadow">
+                <div class="radial-progress">
+                    <p>Carregando...</p>
+                    <div class="circle">
+                        <div class="mask full">
+                            <div class="fill"></div>
+                        </div>
+                        <div class="mask half">
+                            <div class="fill"></div>
+                            <div class="fill fix"></div>
+                        </div>
+                        <div class="shadow"></div>
+                    </div>
+                    <div class="inset"></div>
+                </div>
+            </div>
+            <div class="progress_bar">
+                <span class="help" id="barHelp"></span>
+                <div id="slider-range"></div>
+                <hr class="all_steps">
+                <hr class="current_steps">
+                <div class="step current" id="step2000">
+                    <p>	2000</p>
+                </div>
+                <div class="step current" id="step2001">
+                    <p>2001</p>
+                </div>
+                <div class="step current" id="step2002">
+                    <p>2002</p>
+                </div>
+                <div class="step current" id="step2003">
+                    <p>2003</p>
+                </div>
+                <div class="step current" id="step2004">
+                    <p>2004</p>
+                </div>
+                <div class="step current" id="step2005">
+                    <p>2005</p>
+                </div>
+                <div class="step current" id="step2006">
+                    <p>2006</p>
+                </div>
+                <div class="step current" id="step2007">
+                    <p>2007</p>
+                </div>
+                <div class="step current" id="step2008">
+                    <p>2008</p>
+                </div>
+                <div class="step current" id="step2009">
+                    <p>2009</p>
+                </div>
+                <div class="step current" id="step2010">
+                    <p>2010</p>
+                </div>
+                <div class="step current" id="step2011">
+                    <p>2011</p>
+                </div>
+                <div class="step current" id="step2012">
+                    <p>2012</p>
+                </div>
+                <div class="step current" id="step2013">
+                    <p>2013</p>
+                </div>
+                <div class="step current" id="step2014">
+                    <p>2014</p>
+                </div>
+                <div class="step current" id="step2015">
+                    <p>2015</p>
+                </div>
+            </div>
+
+            <div class="colL">
+                <div id="map"> 
+                    <span class="help" id="mapHelp"></span>
+                    <p id="mapContainer" ></p>
+                    <div id="dicaMapa">
+                        <span id="iconMapa" ng-click="selUf('');"></span>
+                    </div>
+                </div>
+                <div id="pieContainer">
+                    <p id="pieTitle"> Porcentagem de contratos fechados {{ufTitulo}} {{anoTitulo}}</p>
+                    <canvas id="pieCSL" width="300" height="300"></canvas>
+                    <p class="pieTitle" id="pieTitleCSL">Compras sem Licitação</p>
+                    <canvas id="pieL" width="300" height="300"></canvas>
+                    <p class="pieTitle" id="pieTitleL">Licitação</p>
+                </div>
+                <div id="bubble">
+                    <p>Quantidade de Compras por Modalidade {{ufTitulo}} {{anoTitulo}}</p>
+                    <div id="bubbleContainer"></div>
+                </div>
+                <div id="columnContainer"></div>
+
+            </div>
+            <div class="colR">
+                <div id="barContainer"></div>
+            </div>
+
+            <div id="lineContainer"></div>
+        </div>
+
+        <div class="modal-wrapper">
+            <div class="modal">
+                <div class="head">
+                    <a class="btn-close triggerSobre" href="javascript:;"></a>
+                    <p>Sobre</p>
+                </div>
+                <div class="content">
+                    <p>O objetivo do painel é apresentar de forma gráfica e interativa dados de  compras governamentais.</p>
+                    <p>Os dados foram capturados na API de Compras Governamentais (http://compras.dados.gov.br/docs/home.html).</p>
+                    <p>Nesta versão, para análise, o painel está trabalhado com um conjunto restrito de dados.</p>
+                    <p>O Painel ComprasGov é um trabalho em andamento, realizado para a conclusão do curso de Sistemas de Informação, da Universidade Federal de Itajubá (UNIFEI).</p>
+                </div>
+            </div>
+        </div>  
+    </body>
+</html>

@@ -1,0 +1,555 @@
+
+body{
+    width: 90%;
+    height: 150%;
+    margin: 0 auto;
+}
+
+/*---------Header---------*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+header {
+  border-bottom: 3px solid #444;
+  color: #ddd;
+  width: 112%;
+  margin: 0 auto;
+  height: 3em;
+  line-height: 3em;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-size: 3em 3em;
+  background-color: #222;
+  background-position: 0.25em 0;
+  padding: 0 0 0 2em;
+  margin-left: -6%;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+header span {
+  display: inline-block; 
+  font-size: 25px;
+}
+
+.help{
+  background-image: url("/img/icon_help.png");
+   height: 35px;
+   width: 35px;
+   background-size: contain;
+   cursor: pointer;
+}
+
+.navigation {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  vertical-align: top;
+  width: 40%;
+  text-align: center;
+  float: right;
+}
+
+.navigation li {
+  display: inline-block;
+  line-height: 3em;
+  width: 25%;
+}
+/*.navigation li:nth-child(1) a {
+  border-bottom-color: #00ac7a;
+}*/
+
+.navigation li:nth-child(2) a {
+  border-bottom-color: #00ac7a;
+}
+.navigation li:nth-child(3) a {
+  border-bottom-color: #007aac;
+}
+.navigation li:nth-child(4) a {
+  border-bottom-color: #555555;
+}
+.navigation li a {
+  height: 51px;
+  display: block;
+  color: #fff;
+  background-color: rgba(0, 172, 122, 0.85);
+  font-size: 20px;
+  text-decoration: none;
+  border-bottom: 3px solid;
+}
+
+/*.navigation li a:after {
+  content: "";
+  display: block;
+  height: 100%;
+}*/
+
+/*.navigation li a:hover {
+  border-bottom-width: 48px;
+  background: #333;
+}*/
+
+
+/*---------NavigationBar---------*/
+#step2000 p, #step2002 p, #step2004 p, #step2005 p, #step2006 p, #step2008 p, #step2010 p, #step2012 p, #step2014 p{
+      margin-top: -2px;
+}
+
+#stepTodos p, #step2001 p, #step2003 p, #step2005 p, #step2007 p, #step2009 p, #step2011 p, #step2013 p, #step2015 p{
+      margin-top: 44px;
+}
+
+.progress_bar {
+  font-family: Arial;
+  font-weight: bold;
+  width: 100%;
+  margin: 3% auto 0;
+  position: relative;
+  height: 50px;
+  z-index: 10;
+  margin-bottom: 4%;
+}
+
+#barHelp{
+  float: right;
+  margin-right: 3%;
+}
+
+.progress_bar hr.all_steps {
+  width: 88%;
+  height: 7px;
+  border: none;
+  background: #DDDDDD;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  bottom: 3px;
+  left: 3%;
+  z-index: 1;
+}
+.progress_bar hr.current_steps {
+  width: 0%;
+  border: 0;
+  height: 5px;
+  background: rgba(0, 172, 122, 0.85);
+  position: absolute;
+  bottom: 12px;
+  left: 10%;
+  z-index: 3;
+}
+.progress_bar div.step {
+  float: left;
+  width: 5.88%;
+  height: 50px;
+  text-align: center;
+  font-size: 12px;
+  color: #ccc;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.progress_bar div.step:before {
+  cursor: pointer;
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  background: rgba(0, 172, 122, 0.85);
+  bottom: 14px;
+  left: 50%;
+  margin-left: -6px;
+  content: '';
+  z-index: 4;
+  display: none;
+}
+.progress_bar div.step:after {
+  cursor: pointer;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 20px;
+  border: 2px solid #DDDDDD;
+  background: #DDDDDD;
+  bottom: 12px;
+  left: 50%;
+  margin-left: -8px;
+  content: '';
+  z-index: 2;
+}
+.progress_bar div.step.current {
+  color: #222;
+}
+.progress_bar div.step.current:before {
+  display: block;
+}
+.progress_bar div.step.complete {
+  color: #888;
+  cursor: pointer;
+}
+.progress_bar div.step.complete:before {
+  display: block;
+}
+.progress_bar div.step.complete:hover {
+  color: #555;
+}
+
+#slider-range{
+  width: 89%;
+  margin-left:2.6%;
+  bottom:-32px;
+  position: relative;
+  z-index: 10;
+  height:12%;
+}
+
+.ui-slider .ui-slider-handle, .ui-state-default, .ui-corner-all{
+  border-radius:10px;
+  cursor:pointer;
+  background: rgba(0, 172, 122, 0.85);
+  height:70%;
+  position: relative;
+}
+
+.ui-slider-handle, .ui-state-hover, .ui-corner-active, .ui-corner-focus {
+   outline: 0 !important;
+}
+
+.ui-slider-range { 
+	background: rgba(0, 172, 122, 0.85); 
+}
+
+.ui-widget-content {
+  border:none;
+  background: transparent;
+  
+}
+
+/*-------------Coluna Esquerda-------------*/
+.colL{
+    float: left;
+    width: 49%;
+    height: 125%;
+}
+
+/*---------Mapa---------*/
+#mapContainer {
+    width: 100%;
+    height:30%;
+    margin: 0 auto;    
+}
+
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+#dicaMapa{
+    margin-top: -150px;
+    text-align: center;
+    position: relative;
+    width: 19%;
+    margin-left: 10%;
+    font-size: 85%;
+}
+
+#mapHelp{
+   float: left;
+   position: absolute;
+   z-index: 10;
+}
+
+#iconMapa{
+    cursor: pointer;
+    margin-left: -20%;
+    position: absolute;
+    width: 60px;
+    background-size: contain;
+    height: 60px;
+    background-image: url("/img/icon_mapa_click.png");
+}
+
+#iconMapa:hover{
+  background-image: url("/img/icon_mapa_click.png");
+}
+
+/*---------Pie----------*/
+canvas {
+	width: 35%;
+}
+
+    
+
+#pieContainer{
+    margin-left: 15%;
+    position: relative;
+    margin-top: 30%;
+
+}
+
+#pieContainer p{
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 109%;
+    text-align: center;
+}
+
+#pieTitle{
+  margin-left: -10%;
+}
+
+#pieTitleCSL{
+    margin-left: 35%;
+    color: rgb(154, 56, 119);
+}
+
+#pieTitleL{
+    margin-left: 10%;
+    color: rgb(56, 113, 154);
+}
+    
+.pieTitle{
+  position: absolute;
+  font-weight: bold;
+  margin-top: -25px;
+}
+
+/*---------Bubble----------*/
+#bubbleContainer text {
+  font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  fill: #fff;
+  text-anchor: middle;
+  pointer-events: none;
+}
+
+#bubble{
+  width: 100%;
+  height: 25%;
+}
+
+#bubble p{
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+  font-size: 109%;
+  margin-bottom: -4%;
+  text-align: center;
+}
+#bubbleContainer svg{
+    margin-top: 3%;
+    width: 90%;
+    height: 90%;
+}
+
+circle:hover {
+  opacity: .9;
+}
+
+/*---------Column----------*/
+#columnContainer{
+    width: 90%;
+    height:25%;
+    margin: 0 auto;
+}
+
+/*-------------Coluna Direita-------------*/
+.colR{
+    float: right;
+    width: 49%;
+    height: 130%;
+    margin-bottom: 5%;
+}
+
+/*---------Bar----------*/
+#barContainer{
+    width: 90%;
+    height:100%;
+    margin: 0 auto; 
+}
+
+/*---------Line----------*/
+
+
+#lineContainer{
+    float: left;
+    padding-left: 2.5%;
+    width: 90%;
+    height: 35%;
+    margin: 0 auto; 
+}
+
+
+/*---------LOADER--------*/
+.radial-progress {
+    margin: 35% auto;
+    width: 100px;
+    height: 100px;
+    background-color: #d6dadc;
+    border-radius: 50%;
+}
+
+.radial-progress p{
+  position: absolute;
+    z-index: 10;
+    margin-top: 105px;
+    margin-left: -4px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.radial-progress .circle .mask,
+.radial-progress .circle .fill,
+.radial-progress .circle .shadow {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 50%;
+}
+.radial-progress .circle .shadow {
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2) inset;
+}
+.radial-progress .circle .mask,
+.radial-progress .circle .fill {
+  -webkit-backface-visibility: hidden;
+  transition: -webkit-transform 1s;
+  transition: -ms-transform 1s;
+  transition: transform 1s;
+}
+.radial-progress .circle .mask {
+  clip: rect(0px, 100px, 100px, 50px);
+}
+.radial-progress .circle .mask .fill {
+  clip: rect(0px, 50px, 100px, 0px);
+  background-color: #2d95bf;
+}
+.radial-progress .inset {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 15px;
+    background-color: #f0f1f1;
+    border-radius: 50%;
+}
+
+.painelShadow{
+    width: 90%;
+    height: 270%;
+    position: absolute;
+    z-index: 500;
+    margin: 0 auto;
+    background-color: #f0f1f1;
+    opacity: 0.9;
+}
+
+/*---------MODAL--------*/
+
+.blur{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+
+.modal-wrapper{
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0; left:0;
+  background:rgba(132,132,132,0.75);
+  visibility:hidden;
+  opacity:0;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+.modal-wrapper.open{
+  opacity:1;
+  visibility:visible;
+}
+
+.modal{
+  width:600px;
+  height:400px;
+  display:block;
+  margin:50% 0 0 -300px;
+  position:relative;
+  top:50%; left:50%;
+  background:#fff;
+  opacity:0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.modal-wrapper.open .modal{
+  margin-top:-200px;
+  opacity:1;
+}
+
+.head{
+  width: 100%;
+  height: 10%;
+  padding: 1% 5%;
+  overflow: hidden;
+  background: #00ac7a;
+}
+
+.head P{
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 150%;
+    margin-top: 0%;
+    color: #f1f1f1;
+}
+
+
+.btn-close{
+  width:32px;
+  height:32px;
+  display:block;
+  float:right;
+}
+
+.btn-close::before, .btn-close::after{
+  content:'';
+  width:32px;
+  height:6px;
+  display:block;
+  background:#fff;
+}
+
+.btn-close::before{
+  margin-top:12px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+}
+
+.btn-close::after{
+  margin-top:-6px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+}
+
+.content{
+  padding:5%;
+  font-family: sans-serif;
+  font-size: 100%;
+  text-align: justify;
+}
